@@ -26,7 +26,7 @@ async def on_message(message):
         elif user_message.lower() =='bye':
             await message.channel.send(f'See you later{username}!')
             return
-        elif user_message.lower() =='!random'
+        elif user_message.lower() =='!random':
             response = f'This is your random number:{random.randrange(1000000)}'
             await message.channel.send(response)
             return
