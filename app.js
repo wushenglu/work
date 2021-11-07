@@ -16,11 +16,11 @@ app.use(
 
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in': 'Logged out');
-})
+});
 
 app.get('/profile', requiresAuth(), (req, res) =>{
   res.send(JSON.stringify(req.oidc.user));
-})
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () =>{
